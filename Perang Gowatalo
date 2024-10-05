@@ -1,0 +1,74 @@
+from pptx import Presentation
+from pptx.util import Inches
+
+# Membuat objek Presentasi
+prs = Presentation()
+
+# Slide 1: Judul
+slide_layout = prs.slide_layouts[0]  # Menggunakan layout slide judul
+slide = prs.slides.add_slide(slide_layout)
+
+title = slide.shapes.title
+subtitle = slide.placeholders[1]
+
+title.text = "Perang Gowatalo"
+subtitle.text = "Sejarah dan Dampaknya"
+
+# Slide 2: Latar Belakang
+slide_layout = prs.slide_layouts[1]  # Menggunakan layout slide konten
+slide = prs.slides.add_slide(slide_layout)
+
+title = slide.shapes.title
+title.text = "Latar Belakang"
+
+content = slide.shapes.placeholders[1]
+content.text = (
+    "Perang Gowatalo adalah sebuah peristiwa sejarah yang melibatkan konflik besar di wilayah Nusantara. "
+    "Perang ini terjadi pada abad ke-17 dan berdampak signifikan pada perkembangan politik dan sosial di wilayah tersebut."
+)
+
+# Slide 3: Penyebab Perang
+slide_layout = prs.slide_layouts[1]
+slide = prs.slides.add_slide(slide_layout)
+
+title = slide.shapes.title
+title.text = "Penyebab Perang"
+
+content = slide.shapes.placeholders[1]
+content.text = (
+    "1. Perebutan kekuasaan di antara kerajaan lokal.\n"
+    "2. Pengaruh kolonialisme yang mulai masuk ke wilayah Nusantara.\n"
+    "3. Ketidakpuasan rakyat terhadap sistem pemerintahan yang ada."
+)
+
+# Slide 4: Dampak Perang
+slide_layout = prs.slide_layouts[1]
+slide = prs.slides.add_slide(slide_layout)
+
+title = slide.shapes.title
+title.text = "Dampak Perang"
+
+content = slide.shapes.placeholders[1]
+content.text = (
+    "1. Melemahnya kerajaan-kerajaan lokal.\n"
+    "2. Munculnya kekuasaan baru di bawah pengaruh kolonial.\n"
+    "3. Pergeseran budaya dan sosial di kalangan masyarakat lokal."
+)
+
+# Slide 5: Kesimpulan
+slide_layout = prs.slide_layouts[1]
+slide = prs.slides.add_slide(slide_layout)
+
+title = slide.shapes.title
+title.text = "Kesimpulan"
+
+content = slide.shapes.placeholders[1]
+content.text = (
+    "Perang Gowatalo merupakan salah satu peristiwa penting dalam sejarah Nusantara. "
+    "Perang ini memberikan dampak yang besar terhadap perkembangan politik, sosial, dan budaya di wilayah tersebut."
+)
+
+# Menyimpan presentasi
+prs.save("Presentasi_Perang_Gowatalo.pptx")
+
+print("Presentasi telah berhasil dibuat.")
